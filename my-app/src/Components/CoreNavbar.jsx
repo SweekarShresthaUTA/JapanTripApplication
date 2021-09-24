@@ -1,6 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+
 
 // Our Navbar component that takes in 3 default menu options, the titles of which can be passed in as props
 // And a Default drop down menu with 3 items to show in those items, titles of which can also be passed in as props
@@ -23,14 +25,22 @@ function CoreNavBar(props) {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <img src="https://www.uta.edu/ucomm/identity/files/logo/UTA_A-logo_blue-orange-rgb.png" alt="UTA-Logo" height="20px"/>
+        <img
+          src="https://www.uta.edu/ucomm/identity/files/logo/UTA_A-logo_blue-orange-rgb.png"
+          alt="UTA-Logo"
+          height="20px"
+        />
         <Navbar.Brand href="home">{title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="contacts">{firstMenuTitle}</Nav.Link>
+            <LinkContainer to="./ResourcesComponents/CurrencyExchange">
+              <Nav.Link href="contacts">{firstMenuTitle}</Nav.Link>
+            </LinkContainer>
             <Nav.Link href="schedule">{secondMenuTitle}</Nav.Link>
-            <Nav.Link href="currencyExchange">{thirdMenuTitle}</Nav.Link>
+            <Nav.Link href="/CurrencyExchange">
+              {thirdMenuTitle}
+            </Nav.Link>
             <NavDropdown title={dropDownMenuTitle} id="basic-nav-dropdown">
               <NavDropdown.Item href="commonPhrases">
                 {firstDropDownMenuOption}
@@ -38,7 +48,9 @@ function CoreNavBar(props) {
               <NavDropdown.Item href="landmarkLookup">
                 {secondDropDownMenuOption}
               </NavDropdown.Item>
-              <NavDropdown.Item href="culturalInformation">{thirdDropDownMenuOption}</NavDropdown.Item>
+              <NavDropdown.Item href="culturalInformation">
+                {thirdDropDownMenuOption}
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
