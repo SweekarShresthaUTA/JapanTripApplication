@@ -1,15 +1,7 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
 
-
-function currencyExchange() {
-    console.log("entered in currency exchange");
-    return(
-        <div>
-            CurrencyExchange
-        </div>
-    );
-
+const CurrencyExchange = () => {
+    return <div>Currency Exchange</div>
 }
 
-export default currencyExchange;
+export default CurrencyExchange;
