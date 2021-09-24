@@ -3,6 +3,7 @@ import "./App.css";
 import CoreNavBar from "./Components/CoreNavbar";
 
 function App() {
+  console.log("Hello World")
   return (
     <div>
       <CoreNavBar
