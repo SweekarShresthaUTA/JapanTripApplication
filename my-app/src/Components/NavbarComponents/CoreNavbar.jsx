@@ -49,10 +49,10 @@ function CoreNavBar(props) {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-        </Navbar.Collapse>
-        <Nav.Link style={{justifyContent: "right"}} href="/Login">
+          <Nav.Link style={{justifyContent: "right"}} href="/Login">
               Sign Out
             </Nav.Link>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
