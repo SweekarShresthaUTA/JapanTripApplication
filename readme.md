@@ -5,6 +5,14 @@
 3) Implemented Currency Exchange logic to convert from USD -> JPY and vice versa
 4) Implemented Schedule feature where there is admin access to add more to the existing schedule
 
+
+
+
+
+
+
+
+
 -----------------------------------------------General Information------------------------------------------------------
 
 This is Team 8's MavsAbroad to Japan application
