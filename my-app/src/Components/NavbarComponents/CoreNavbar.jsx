@@ -1,8 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-
 
 // Our Navbar component that takes in 3 default menu options, the titles of which can be passed in as props
 // And a Default drop down menu with 3 items to show in those items, titles of which can also be passed in as props
@@ -30,14 +28,12 @@ function CoreNavBar(props) {
           alt="UTA-Logo"
           height="20px"
         />
-        <Navbar.Brand href="home">{title}</Navbar.Brand>
+        <Navbar.Brand href="/">{title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <LinkContainer to="./ResourcesComponents/CurrencyExchange">
-              <Nav.Link href="contacts">{firstMenuTitle}</Nav.Link>
-            </LinkContainer>
-            <Nav.Link href="schedule">{secondMenuTitle}</Nav.Link>
+            <Nav.Link href="/Contacts">{firstMenuTitle}</Nav.Link>
+            <Nav.Link href="/Schedule">{secondMenuTitle}</Nav.Link>
             <Nav.Link href="/CurrencyExchange">
               {thirdMenuTitle}
             </Nav.Link>
