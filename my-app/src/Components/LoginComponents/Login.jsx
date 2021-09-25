@@ -1,4 +1,4 @@
-// Will add login implementation soon
+// Will add login implementation in the next iteration
 // Currently is just being redirected whenver 'Sign Out' is clicked within app
 
 import React from "react";
