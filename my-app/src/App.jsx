@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import CoreNavBar from "./Components/CoreNavbar";
+import CoreNavBar from "./Components/NavbarComponents/CoreNavbar";
 
 function App() {
   console.log("Hello World")
