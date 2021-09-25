@@ -1,3 +1,5 @@
+Team 8's MavsAbroad to Japan application
+
 -----------------------------------------------Iteration 1------------------------------------------------------
 
 1) Skeleton of the project which opens in the home page
@@ -15,9 +17,7 @@
 
 -----------------------------------------------General Information------------------------------------------------------
 
-This is Team 8's MavsAbroad to Japan application
-
--------------------- Software and steps required to run the application ---------------------
+Software and steps required to run the application
 
 1) Clone the repository
 2) Download and Install Visual Studio Code
