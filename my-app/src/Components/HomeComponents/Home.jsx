@@ -1,11 +1,13 @@
-// Provides search bar to look up different landmarks
-// Will use places API and Microsoft Cognitive services API to implement logic in next iteration
-// Currently returns NavBar and H1 heading indicating 'Landmark Lookup' for this iteration
+// Returns CoreNavbar with props consisting of all the titles for 
+// our page
+
+// Also returns h1 indiciating implmenetation of map coming soon
 
 import React from "react";
+import "./Home.css";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
 
-const LandmarkLookup = () => {
+const Home = () => {
   return (
     <div>
       <CoreNavBar
@@ -18,13 +20,10 @@ const LandmarkLookup = () => {
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
       />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1 style={{ textAlign: "center" }}>Landmark Lookup</h1>
+      <br/><br/>
+      <br/><br/>
+      <h1 style={{textAlign: "center"}}>Home page with Interactive Map coming soon</h1>
     </div>
   );
-};
-
-export default LandmarkLookup;
+}
+export default Home;

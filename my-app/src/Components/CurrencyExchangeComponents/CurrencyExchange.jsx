@@ -14,7 +14,9 @@ const CurrencyExchange = () => {
                 secondDropDownMenuOption="Landmark Lookup"
                 thirdDropDownMenuOption="Cultural Information"
             />
-            <h1>Currency Exchange</h1>
+            <br/><br/>
+            <br/><br/>
+            <h1 style={{textAlign: "center"}}>Currency Exchange</h1>
         </div>
     );
 }

@@ -1,22 +1,12 @@
 import React from "react";
 import "./App.css";
-import CoreNavBar from "./Components/NavbarComponents/CoreNavbar";
+import Home from "./Components/HomeComponents/Home";
 
-function App() {
-  console.log("Hello World")
-  return (
-    <div>
-      <CoreNavBar
-        title="MavsAbroad"
-        firstMenuTitle="Contacts"
-        secondMenuTitle="Schedule"
-        thirdMenuTitle="Currency Exchange"
-        dropDownMenuTitle="Resources"
-        firstDropDownMenuOption="Common Phrases"
-        secondDropDownMenuOption="Landmark Lookup"
-        thirdDropDownMenuOption="Cultural Information"
-      />
-    </div>
-  );
+// The code now just returns the application to the Homepage whenever 
+// the page is first rendered 
+
+const App = () => {
+  return <Home/>
 }
+
 export default App;
