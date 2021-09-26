@@ -48,7 +48,7 @@ const Contacts = () => {
       <p style={{textAlign: "center"}}>
         <a href=" https://www.uta.edu/academics/schools-colleges/liberal-arts/departments/communication">UTA Communications Department</a>
       </p>
-      <img src={ContactsBG} style={{height: "300px"}} className="jp-img" alt="Jpn-Background-Img" />
+      <img src={ContactsBG} style={{height: "218px"}} className="jp-img" alt="Jpn-Background-Img" />
     </div>
   );
 };
