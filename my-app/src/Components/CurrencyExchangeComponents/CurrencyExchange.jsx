@@ -54,7 +54,7 @@ const CurrencyExchange = () => {
         crossorigin="anonymous"
       />
       <CoreNavBar
-        title="MavsAbroad"
+        title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
         secondMenuTitle="Schedule"
         thirdMenuTitle="Currency Exchange"

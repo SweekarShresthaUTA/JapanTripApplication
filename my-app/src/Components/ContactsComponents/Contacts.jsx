@@ -8,7 +8,7 @@ const Contacts = () => {
   return (
     <div>
       <CoreNavBar
-        title="MavsAbroad"
+        title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
         secondMenuTitle="Schedule"
         thirdMenuTitle="Currency Exchange"
@@ -22,6 +22,27 @@ const Contacts = () => {
       <br />
       <br />
       <h1 style={{ textAlign: "center" }}>Contacts</h1>
+      <h5 style={{ textAlign: "center", paddingTop: 50 }}>Professor Aiken</h5>
+      <p style={{textAlign: "center"}}>
+        <a href="mailto:laiken@uta.edu" >laiken@uta.edu</a>
+      </p>
+      <p style={{textAlign: "center"}}>
+        <a href="https://mentis.uta.edu/explore/profile/ladonna-aiken" >Professor Aiken's UTA Page</a>
+      </p>
+      <h5 style={{ textAlign: "center", paddingTop: 50 }}>Professor Horton</h5>
+      <p style={{textAlign: "center"}}>
+        <a href="mailto:brianhorton@uta.edu" >brianhorton@uta.edu</a>
+      </p>
+      <p style={{textAlign: "center"}}>
+        <a href="https://mentis.uta.edu/explore/profile/brian-horton" >Professor Horton's UTA Page</a>
+      </p>
+      <h5 style={{ textAlign: "center", paddingTop: 50 }}>UTA Links</h5>
+      <p style={{textAlign: "center"}}>
+        <a href="https://studyabroad.uta.edu">UTA Study Abroad Program</a>
+      </p>
+      <p style={{textAlign: "center"}}>
+        <a href=" https://www.uta.edu/academics/schools-colleges/liberal-arts/departments/communication">UTA Communications Department</a>
+      </p>
     </div>
   );
 };

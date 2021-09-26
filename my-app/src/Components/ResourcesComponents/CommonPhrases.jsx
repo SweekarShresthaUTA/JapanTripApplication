@@ -8,7 +8,7 @@ const CommonPhrases = () => {
   return (
     <div>
       <CoreNavBar
-        title="MavsAbroad"
+        title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
         secondMenuTitle="Schedule"
         thirdMenuTitle="Currency Exchange"
