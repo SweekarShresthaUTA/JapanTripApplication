@@ -46,7 +46,7 @@ const CurrencyExchange = () => {
   }
 
   return (
-    <div>
+    <div className="eliminateHorizontalScroll">
       <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

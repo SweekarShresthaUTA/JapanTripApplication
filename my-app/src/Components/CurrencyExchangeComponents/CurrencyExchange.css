@@ -24,3 +24,8 @@
 {
   margin-left: 0.5rem;
 }
+
+.eliminateHorizontalScroll
+{
+  overflow-x: hidden;
+}
