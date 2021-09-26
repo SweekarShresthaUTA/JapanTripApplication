@@ -5,7 +5,7 @@ import React from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
 import ContactsBG from "../../Images/ContactsBG.png"
 
-const Contacts = () => {
+const Contacts = () => { console.log("hello world");
   return (
     <div>
       {/* Navbar that will be called with the followign props that holds the titles to be rendered for the navbar */}
