@@ -22,7 +22,7 @@ const Home = () => {
       />
       <br/><br/>
       <br/><br/>
-      <h1 style={{textAlign: "center"}}>Home page with Interactive Map coming soon</h1>
+      <h1 style={{textAlign: "center"}}>Interactive Map coming soon</h1>
     </div>
   );
 }
