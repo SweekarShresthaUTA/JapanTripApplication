@@ -1,10 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
 import JapanBackground from "../../Images/JapanBackground.png";
 import "./CurrencyExchange.css";
 import CurrencyRow from "./CurrencyRow";
 
 const CurrencyExchange = () => {
+  const BASE_URL =
+    "https://free.currconv.com/api/v7/convert?q=USD_JPY&compact=ultra&apiKey=49e1dd59324690c7911f";
+
+  const [USD_JPY_RATE, setUSD_JPY_RATE] = useState(0);
+  const [amount, setAmount] = useState(1);
+  const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
+
+  let toAmount, fromAmount;
+
+  if(amountInFromCurrency)
+  {
+    fromAmount = amount;
+    toAmount = amount * USD_JPY_RATE;
+  }
+  else 
+  {
+    toAmount = amount;
+    fromAmount = amount / USD_JPY_RATE;
+  }
+
+
+  useEffect(() => {
+    fetch(BASE_URL)
+      .then((res) => res.json())
+      .then((data) => setUSD_JPY_RATE(data.USD_JPY));
+  }, []);
+
+
+  const handleFromAmountChange = (e) => 
+  {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(true);
+  }
+
+  const handleToAmountChange = (e) => 
+  {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(false);
+  }
+
   return (
     <div>
       <link
@@ -25,18 +65,19 @@ const CurrencyExchange = () => {
       />
       <br />
       <div className="row body">
-          <h3 className="body">Currency Exchange</h3>
+        <h3 className="body">Currency Exchange</h3>
+        <h4>Today's Rate → $1.00 = ¥{Math.round(USD_JPY_RATE * 100) / 100}</h4>
       </div>
       <div className="container body">
         <div className="row">
           <div className="col-lg-6">
             <div>
-              <CurrencyRow />
+              $<CurrencyRow amount={fromAmount} onChangeAmount={handleFromAmountChange} currency="USD"/>
             </div>
           </div>
           <div class="col-lg-6">
             <div>
-              <CurrencyRow />
+              ¥<CurrencyRow amount={toAmount} onChangeAmount={handleToAmountChange} currency="JPY" />
             </div>
           </div>
         </div>
