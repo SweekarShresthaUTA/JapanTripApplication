@@ -9,6 +9,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
 function CoreNavBar(props) {
+  // Props consist of different titles passed in form the components that call this navbar component
+  // includes the different tabs for our features in this case
+  // But can be updated or reusable to implement or change the navbar on the fly if different pages need different titles in the navbar 
   const {
     title,
     firstMenuTitle,
@@ -30,6 +33,9 @@ function CoreNavBar(props) {
         />
         <Navbar.Brand href="/">{title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        
+        {/* The collapse feature makes the navbar responsive to any changes made to the viewport */}
+        
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/Contacts">{firstMenuTitle}</Nav.Link>

@@ -10,6 +10,7 @@ import CoreNavBar from "../NavbarComponents/CoreNavbar";
 const Home = () => {
   return (
     <div>
+      {/* Rendering the navbar for the page */}
       <CoreNavBar
         title="MavsAbroadJapan"
         firstMenuTitle="Contacts"

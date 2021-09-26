@@ -8,6 +8,7 @@ import CoreNavBar from "../NavbarComponents/CoreNavbar";
 const LandmarkLookup = () => {
   return (
     <div>
+      {/* Rendering the Navbar */}
       <CoreNavBar
         title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
@@ -22,7 +23,7 @@ const LandmarkLookup = () => {
       <br />
       <br />
       <br />
-      <h1 style={{ textAlign: "center" }}>Landmark Lookup</h1>
+      <h1 style={{ textAlign: "center" }}>Landmark / Destination Lookup feature will be added soon</h1>
     </div>
   );
 };
