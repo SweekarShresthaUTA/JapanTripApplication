@@ -6,6 +6,7 @@
 import React from "react";
 import "./Home.css";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
+import MapsBG from "../../Images/MapsBG.png"
 
 const Home = () => {
   return (
@@ -22,8 +23,9 @@ const Home = () => {
         thirdDropDownMenuOption="Cultural Information"
       />
       <br/><br/>
-      <br/><br/>
       <h1 style={{textAlign: "center"}}>Interactive Map coming soon</h1>
+      <br/>
+      <img src={MapsBG} className="maps-bg" alt="Static-Tokyo-Map-Img" />
     </div>
   );
 }

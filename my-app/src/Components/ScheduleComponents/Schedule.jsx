@@ -3,9 +3,9 @@ import CoreNavBar from "../NavbarComponents/CoreNavbar";
 import ContentBox from "./ContentBox";
 import Activity from "./Activity";
 import "./Schedule.css";
+import ScheduleBG from "../../Images/ScheduleBG.png";
 
 const Schedule = () => {
-
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, "0");
   var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
@@ -58,6 +58,7 @@ const Schedule = () => {
           />
         );
       })}
+      <img src={ScheduleBG} style={{position: "absolute", zIndex: -1, height: '218px'}} className="jp-img" alt="Jpn-Background-Img" />
     </div>
   );
 };

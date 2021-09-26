@@ -1,1 +1,8 @@
 /* Styles for Contacts pages */
+.jp-img {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    height: 10px;
+  }
