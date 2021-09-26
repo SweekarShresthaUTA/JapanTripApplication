@@ -13,6 +13,7 @@ const CurrencyExchange = () => {
   const BASE_URL =
     "https://free.currconv.com/api/v7/convert?q=USD_JPY&compact=ultra&apiKey=49e1dd59324690c7911f";
 
+  // Back-up url https://free.currconv.com/api/v7/convert?q=USD_JPY&compact=ultra&apiKey=3c5ecc810679f21982b2
   // setUSD_JPY_RATE sets the value of USD_JPY_RATE whenever the app changes state -> or in this case whenever new amount is queried or 
   //      API Call indicates the exchange rate has changed
   // 
