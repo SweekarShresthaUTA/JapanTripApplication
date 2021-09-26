@@ -1,3 +1,5 @@
+// CurrencyExchange main page that will render the USD to JPY conversion
+
 import React, { useEffect, useState } from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
 import JapanBackground from "../../Images/JapanBackground.png";
@@ -5,9 +7,14 @@ import "./CurrencyExchange.css";
 import CurrencyRow from "./CurrencyRow";
 
 const CurrencyExchange = () => {
+
+  // Call to the API that will provide us the latest USD To JPY rate, specifically $1 equivlent in JPY
+  // We use the data returned back as JSON to set it to our USD_JPY_RATE
   const BASE_URL =
     "https://free.currconv.com/api/v7/convert?q=USD_JPY&compact=ultra&apiKey=49e1dd59324690c7911f";
 
+  // setUSD_JPY_RATE sets the value of USD_JPY_RATE whenever the app changes state -> or in this case whenever new aount is queried
+  // setAmount sets amount whenever the user types into the input field for default currency and according change is displayed  
   const [USD_JPY_RATE, setUSD_JPY_RATE] = useState(0);
   const [amount, setAmount] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);

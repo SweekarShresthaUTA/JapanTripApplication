@@ -7,6 +7,7 @@ import CoreNavBar from "../NavbarComponents/CoreNavbar";
 const Contacts = () => {
   return (
     <div>
+      {/* Navbar that will be called with the followign props that holds the titles to be rendered for the navbar */}
       <CoreNavBar
         title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
@@ -21,6 +22,7 @@ const Contacts = () => {
       <br />
       <br />
       <br />
+      {/* Professor Aiken's Contact Information */}
       <h1 style={{ textAlign: "center" }}>Contacts</h1>
       <h5 style={{ textAlign: "center", paddingTop: 50 }}>Professor Aiken</h5>
       <p style={{textAlign: "center"}}>
@@ -29,6 +31,8 @@ const Contacts = () => {
       <p style={{textAlign: "center"}}>
         <a href="https://mentis.uta.edu/explore/profile/ladonna-aiken" >Professor Aiken's UTA Page</a>
       </p>
+
+      {/* Professor Horton's Contact Information */}
       <h5 style={{ textAlign: "center", paddingTop: 50 }}>Professor Horton</h5>
       <p style={{textAlign: "center"}}>
         <a href="mailto:brianhorton@uta.edu" >brianhorton@uta.edu</a>
@@ -36,6 +40,8 @@ const Contacts = () => {
       <p style={{textAlign: "center"}}>
         <a href="https://mentis.uta.edu/explore/profile/brian-horton" >Professor Horton's UTA Page</a>
       </p>
+
+      {/* Useful UTA links */}
       <h5 style={{ textAlign: "center", paddingTop: 50 }}>UTA Links</h5>
       <p style={{textAlign: "center"}}>
         <a href="https://studyabroad.uta.edu">UTA Study Abroad Program</a>
