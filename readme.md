@@ -5,7 +5,7 @@ Team 8's MavsAbroad to Japan application
 Main Code files are in my-app -> src 
 
 1) Skeleton of the project which opens in the home page
-2) Implemented the Navbar with different tabs redirecting users to specified pages in the Navbar titles
+2) Implemented the Navbar with different tabs redirecting users to specific pages in the Navbar titles
 3) Implemented Currency Exchange logic to convert from USD -> JPY and vice versa
 4) Implemented Schedule feature where there is admin access to add more to the existing schedule
 
