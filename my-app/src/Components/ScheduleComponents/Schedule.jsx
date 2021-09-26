@@ -59,6 +59,7 @@ const Schedule = () => {
         );
       })}
       <img src={ScheduleBG} style={{position: "absolute", zIndex: -1, height: '218px'}} className="jp-img" alt="Jpn-Background-Img" />
+      {/* src for iteration documentation for the image above -> https://www.pngwing.com/en/search?q=japan */}
     </div>
   );
 };

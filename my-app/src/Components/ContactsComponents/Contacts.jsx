@@ -49,6 +49,8 @@ const Contacts = () => {
         <a href=" https://www.uta.edu/academics/schools-colleges/liberal-arts/departments/communication">UTA Communications Department</a>
       </p>
       <img src={ContactsBG} style={{height: "218px"}} className="jp-img" alt="Jpn-Background-Img" />
+      {/* src for iteration documentation for the image above -> https://www.pngwing.com/en/search?q=japan */}
+
     </div>
   );
 };

@@ -26,6 +26,8 @@ const Home = () => {
       <h1 style={{textAlign: "center"}}>Interactive Map coming soon</h1>
       <br/>
       <img src={MapsBG} className="maps-bg" alt="Static-Tokyo-Map-Img" />
+      {/* src for iteration documentation for the image above -> https://www.google.com/maps */}
+
     </div>
   );
 }
