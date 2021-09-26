@@ -7,6 +7,7 @@ import CoreNavBar from "../NavbarComponents/CoreNavbar";
 const CommonPhrases = () => {
   return (
     <div>
+      {/* Rendering the Navbar */}
       <CoreNavBar
         title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
@@ -21,7 +22,7 @@ const CommonPhrases = () => {
       <br />
       <br />
       <br />
-      <h1 style={{ textAlign: "center" }}>Common Phrases</h1>
+      <h1 style={{ textAlign: "center" }}>Common Japansese Phrases will be added soon</h1>
     </div>
   );
 };

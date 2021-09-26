@@ -13,8 +13,13 @@ const CurrencyExchange = () => {
   const BASE_URL =
     "https://free.currconv.com/api/v7/convert?q=USD_JPY&compact=ultra&apiKey=49e1dd59324690c7911f";
 
-  // setUSD_JPY_RATE sets the value of USD_JPY_RATE whenever the app changes state -> or in this case whenever new aount is queried
-  // setAmount sets amount whenever the user types into the input field for default currency and according change is displayed  
+  // setUSD_JPY_RATE sets the value of USD_JPY_RATE whenever the app changes state -> or in this case whenever new amount is queried or 
+  //      API Call indicates the exchange rate has changed
+  // 
+  // setAmount sets the state of the amount variable to the converted currency value either from USD to JPY or vice versa
+  // 
+  // setAmountInFromCurrency sets a boolean value amountInFromCurrency -> true, indicating that we are converting from USD to JPY
+  //      OR it sets amountInFromCurrency -> false, indicating that we are converting from JPY to USD 
   const [USD_JPY_RATE, setUSD_JPY_RATE] = useState(0);
   const [amount, setAmount] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
@@ -23,16 +28,20 @@ const CurrencyExchange = () => {
 
   if(amountInFromCurrency)
   {
+    // USD is provided and we are and we are getting the JPY equivalent by multiplying the exchange rate
     fromAmount = amount;
     toAmount = amount * USD_JPY_RATE;
   }
   else 
   {
+    // JPY is provided and we are and we are getting the USD equivalent by diving the exchange rate
     toAmount = amount;
     fromAmount = amount / USD_JPY_RATE;
   }
 
-
+  // hook that renders its passed in anonymous passed as the first thing to be rendered in the page entirely.
+  // Fetches the API to get the latest exchange rate
+  // Everytime the page refreshes, the anonymous function is the first thing that is called to provide latest exchange rate
   useEffect(() => {
     fetch(BASE_URL)
       .then((res) => res.json())
@@ -42,12 +51,14 @@ const CurrencyExchange = () => {
 
   const handleFromAmountChange = (e) => 
   {
+    // seting JPY based on input provided in USD and setting the boolean amountInFromCurrency useState from above to true
     setAmount(e.target.value);
     setAmountInFromCurrency(true);
   }
 
   const handleToAmountChange = (e) => 
   {
+    // seting USD based on input provided in JPY and setting the boolean amountInFromCurrency useState from above to false
     setAmount(e.target.value);
     setAmountInFromCurrency(false);
   }
@@ -60,6 +71,7 @@ const CurrencyExchange = () => {
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous"
       />
+      {/* Rendering the Navbar for this page */}
       <CoreNavBar
         title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
@@ -72,6 +84,7 @@ const CurrencyExchange = () => {
       />
       <br />
       <div className="row body">
+        {/* Providing latest change rate, rounded 2 decimal points */}
         <h3 className="body">Currency Exchange</h3>
         <h4>Today's Rate → $1.00 = ¥{Math.round(USD_JPY_RATE * 100) / 100}</h4>
       </div>
@@ -79,11 +92,13 @@ const CurrencyExchange = () => {
         <div className="row">
           <div className="col-lg-6">
             <div>
+              {/* Another JSX component created to handle the input from user */}
               $ amount<CurrencyRow amount={fromAmount} onChangeAmount={handleFromAmountChange} currency="USD"/>
             </div>
           </div>
           <div class="col-lg-6">
             <div>
+              {/* Another JSX component created to handle the input from user */}
               ¥ amount<CurrencyRow amount={toAmount} onChangeAmount={handleToAmountChange} currency="JPY" />
             </div>
           </div>
