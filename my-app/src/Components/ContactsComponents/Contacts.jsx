@@ -3,6 +3,7 @@
 
 import React from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
+import ContactsBG from "../../Images/ContactsBG.png"
 
 const Contacts = () => {
   return (
@@ -18,8 +19,6 @@ const Contacts = () => {
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
       />
-      <br />
-      <br />
       <br />
       <br />
       {/* Professor Aiken's Contact Information */}
@@ -49,6 +48,7 @@ const Contacts = () => {
       <p style={{textAlign: "center"}}>
         <a href=" https://www.uta.edu/academics/schools-colleges/liberal-arts/departments/communication">UTA Communications Department</a>
       </p>
+      <img src={ContactsBG} style={{height: "300px"}} className="jp-img" alt="Jpn-Background-Img" />
     </div>
   );
 };

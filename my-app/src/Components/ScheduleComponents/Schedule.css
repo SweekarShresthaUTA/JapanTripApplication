@@ -1,5 +1,11 @@
 /* Styling for Schedule Pages */
 
+.jp-img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
 * {
     padding: 0;
     margin: 0;
