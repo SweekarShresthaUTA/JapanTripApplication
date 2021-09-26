@@ -72,12 +72,12 @@ const CurrencyExchange = () => {
         <div className="row">
           <div className="col-lg-6">
             <div>
-              Enter $ amount<CurrencyRow amount={fromAmount} onChangeAmount={handleFromAmountChange} currency="USD"/>
+              $ amount<CurrencyRow amount={fromAmount} onChangeAmount={handleFromAmountChange} currency="USD"/>
             </div>
           </div>
           <div class="col-lg-6">
             <div>
-              Enter ¥ amount<CurrencyRow amount={toAmount} onChangeAmount={handleToAmountChange} currency="JPY" />
+              ¥ amount<CurrencyRow amount={toAmount} onChangeAmount={handleToAmountChange} currency="JPY" />
             </div>
           </div>
         </div>
