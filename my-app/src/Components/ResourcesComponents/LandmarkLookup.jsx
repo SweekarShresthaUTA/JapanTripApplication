@@ -3,7 +3,9 @@
 // Currently returns NavBar and H1 heading indicating 'Landmark Lookup' for this iteration
 
 import React from "react";
+//import Home from "../HomeComponents/Home";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
+import "./Resources.css"
 
 const LandmarkLookup = () => {
   return (
@@ -19,11 +21,32 @@ const LandmarkLookup = () => {
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
       />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <h1 style={{ textAlign: "center" }}>Landmark / Destination Lookup feature will be added soon</h1>
+
+      <div className="pictures-bg">
+        <img src="9-13-page-000.jpg" width="550" height="700" alt="Tokyo"></img>
+        <br />
+        <br />
+
+        <img src="9-13-page-001.jpg" width="550" height="700" alt="Tokyo"></img>
+        <br />
+        <br />
+
+        <img src="9-13-page-002.jpg" width="550" height="700" alt="Tokyo"></img>
+        <br />
+        <br />
+
+        <img src="9-13-page-003.jpg" width="550" height="700" alt="Tokyo"></img>
+        <br />
+        <br />
+
+        <img src="9-13-page-004.jpg" width="550" height="700" alt="Tokyo"></img>
+        <br />
+        <br />
+
+        <img src="9-13-page-005.jpg" width="550" height="700" alt="Tokyo"></img>
+      </div>
     </div>
   );
 };
