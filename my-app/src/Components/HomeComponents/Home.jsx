@@ -2,11 +2,11 @@
 // our page
 
 // Also returns h1 indiciating implmenetation of map coming soon
-
 import React from "react";
-import "./Home.css";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
 import MapsBG from "../../Images/MapsBG.png"
+import ImbeddedMap from "./ImbeddedMap"
+import styles from './Home.module.css'
 
 const Home = () => {
   return (
@@ -23,9 +23,10 @@ const Home = () => {
         thirdDropDownMenuOption="Cultural Information"
       />
       <br/><br/>
-      <h1 style={{textAlign: "center"}}>Interactive Map coming soon</h1>
       <br/>
-      <img src={MapsBG} className="maps-bg" alt="Static-Tokyo-Map-Img" />
+      <div className={styles.map}>
+        <ImbeddedMap/>
+      </div>
       {/* src for iteration documentation for the image above -> https://www.google.com/maps */}
 
     </div>

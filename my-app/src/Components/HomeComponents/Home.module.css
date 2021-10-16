@@ -46,3 +46,10 @@
     width: 50%;
   }
   
+  .map 
+  {
+    text-align: center !important;
+    max-width: 65% !important;
+    max-height: 70% !important;
+    padding-left: 16.5rem;
+  }
