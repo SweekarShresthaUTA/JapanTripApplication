@@ -93,7 +93,7 @@ const Weather = () => {
                 </p>
               </div>
             ) : (
-              <h4>Loading...</h4>
+              <h4>Searching...</h4>
             )}
           </div>
         </div>
