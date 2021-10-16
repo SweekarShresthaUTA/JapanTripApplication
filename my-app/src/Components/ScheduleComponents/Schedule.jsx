@@ -12,7 +12,7 @@ const Schedule = () => {
   // Get today's date to be shown as heading, and is updated on the fly by rendering logic below
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, "0");
-  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0
   var yyyy = today.getFullYear();
   today = mm + "/" + dd + "/" + yyyy;
 
@@ -47,6 +47,8 @@ const Schedule = () => {
         firstDropDownMenuOption="Common Phrases"
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
+        fourthDropDownMenuOption="Weather"
+
       />
       <br />
       <br />

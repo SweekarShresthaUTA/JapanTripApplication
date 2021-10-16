@@ -82,6 +82,8 @@ const CurrencyExchange = () => {
         firstDropDownMenuOption="Common Phrases"
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
+        fourthDropDownMenuOption="Weather"
+
       />
       <br />
       <div className="row body">

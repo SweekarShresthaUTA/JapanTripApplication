@@ -18,6 +18,8 @@ const Contacts = () => { console.log("hello world");
         firstDropDownMenuOption="Common Phrases"
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
+        fourthDropDownMenuOption="Weather"
+
       />
       <br />
       <br />

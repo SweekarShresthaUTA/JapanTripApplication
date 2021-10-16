@@ -11,6 +11,7 @@ import CommonPhrases from "./Components/ResourcesComponents/CommonPhrases";
 import CulturalInformation from "./Components/ResourcesComponents/CulturalInformation";
 import LandmarkLookup from "./Components/ResourcesComponents/LandmarkLookup";
 import Login from "./Components/LoginComponents/Login";
+import Weather from './Components/Weather/Weather'
 
 // The following Switch cases Routes the application page to different
 // pages based on the path provided from the imports above
@@ -24,6 +25,7 @@ ReactDOM.render(
         <Route path="/Schedule" component={Schedule} />
         <Route path="/currencyExchange" component={CurrencyExchange} />
         <Route path="/CommonPhrases" component={CommonPhrases} />
+        <Route path="/Weather" component={Weather} />
         <Route path="/CulturalInformation" component={CulturalInformation} />
         <Route path="/LandmarkLookup" component={LandmarkLookup} />
         <Route path="/Login" component={Login} />

@@ -2,12 +2,19 @@
 // Will use places API and Microsoft Cognitive services API to implement logic in next iteration
 // Currently returns NavBar and H1 heading indicating 'Landmark Lookup' for this iteration
 
-import React from "react";
+import React, { useState } from "react";
 //import Home from "../HomeComponents/Home";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
-import "./Resources.css"
+import "./Resources.css";
 
 const LandmarkLookup = () => {
+  const [destination, setDestination] = useState("");
+
+  const LookupLandmark = () => {
+    console.log(destination);
+    setDestination("");
+  };
+
   return (
     <div>
       {/* Rendering the Navbar */}
@@ -20,32 +27,26 @@ const LandmarkLookup = () => {
         firstDropDownMenuOption="Common Phrases"
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
+        fourthDropDownMenuOption="Weather"
+
       />
-
-      <h1 style={{ textAlign: "center" }}>Landmark / Destination Lookup feature will be added soon</h1>
-
-      <div className="pictures-bg">
-        <img src="9-13-page-000.jpg" width="550" height="700" alt="Tokyo"></img>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div style={{ textAlign: "center" }}>
+        <h2>Search for Japanese cities / lankdmarks</h2>
         <br />
         <br />
-
-        <img src="9-13-page-001.jpg" width="550" height="700" alt="Tokyo"></img>
-        <br />
-        <br />
-
-        <img src="9-13-page-002.jpg" width="550" height="700" alt="Tokyo"></img>
-        <br />
-        <br />
-
-        <img src="9-13-page-003.jpg" width="550" height="700" alt="Tokyo"></img>
-        <br />
-        <br />
-
-        <img src="9-13-page-004.jpg" width="550" height="700" alt="Tokyo"></img>
-        <br />
-        <br />
-
-        <img src="9-13-page-005.jpg" width="550" height="700" alt="Tokyo"></img>
+        <input
+          placeholder="Look up a destination..."
+          value={destination}
+          onChange={(e) => {
+            setDestination(e.target.value);
+          }}
+        />
+        
+        <button onClick={LookupLandmark}>Search</button>
       </div>
     </div>
   );
