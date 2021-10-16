@@ -3,12 +3,15 @@ import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import styles from "./Home.module.css";
 
 export class MapContainer extends Component {
+  // different states to handle info windwo and the markers in the google maps window
+  // the selected pages can also be rendered as the state will change
   state = {
     showingInfoWindow: false, // Hides or shows the InfoWindow
     activeMarker: {}, // Shows the active marker upon click
     selectedPlace: {}, // Shows the InfoWindow to the selected place upon a marker
   };
 
+  // onClick trigger function that takes in props and marker to show info window
   onMarkerClick = (props, marker, e) =>
     this.setState({
       selectedPlace: props,
@@ -16,6 +19,7 @@ export class MapContainer extends Component {
       showingInfoWindow: true,
     });
 
+  // onClose trigger to close the info window
   onClose = (props) => {
     if (this.state.showingInfoWindow) {
       this.setState({
@@ -25,12 +29,14 @@ export class MapContainer extends Component {
     }
   };
 
+  // main function that triggers the google maps - as per Google API console directions
   render() {
     return (
         <Map
           google={this.props.google}
           zoom={14}
           className={styles.map}
+          // inital loction provided - Tokyo Lat and Lng
           initialCenter={{
             lat: 35.6762,
             lng: 139.6503,

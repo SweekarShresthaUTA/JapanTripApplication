@@ -2,39 +2,46 @@ import React, { useState, useEffect } from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
 
 const Weather = () => {
-  // State
+  // Different use state each of which handles when the state of the program changes during render
+  // the Api data useState is just to set the credentials
+  // getState() and setState is by default set to Tokyo
   const [apiData, setApiData] = useState({});
   const [getState, setGetState] = useState("tokyo");
   const [state, setState] = useState("tokyo");
 
-  // API KEY AND URL
+  // API key and openweathermap api website
   const apiKey = "9bcc04e9a1fa71c03e599acc037a8439";
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=${apiKey}`;
 
-  // Side effect
+  // useeffect, first thing that happens when the page is rendered is an API call to openweather map
+  // using the credentials
   useEffect(() => {
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => setApiData(data));
   }, [apiUrl]);
 
-  console.log(apiData);
-
-  const inputHandler = (event) => {
+  // handles the input provided by the user from input search bar, the onChange event triggers the 
+  // event and the setGetState is changed to event.target.value which is the value that triggers the event
+  // in this case, the event being the search query such as 'Tokyo'
+  const HandleInput = (event) => {
     setGetState(event.target.value);
     setState("");
   };
 
-  const submitHandler = () => {
+  // function to handle and setState based on the user query that we retrieved from onChange and add it to useState 
+  const HandleSubmit = () => {
     setState(getState);
   };
 
-  const kelvinToFarenheit = (k) => {
+  // convert form kelvin to fahrenheit because the api returns kelvin
+  const TemperatureConversion = (k) => {
     return (k - 273.15).toFixed(2);
   };
 
   return (
     <>
+    {/* rendering the navbar */}
       <CoreNavBar
         title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
@@ -60,11 +67,11 @@ const Weather = () => {
                 type="text"
                 id="location-name"
                 class="form-control"
-                onChange={inputHandler}
+                onChange={HandleInput}
                 value={getState}
               />
             </div>
-            <button className="btn btn-primary mt-2" onClick={submitHandler}>
+            <button className="btn btn-primary mt-2" onClick={HandleSubmit}>
               Search
             </button>
           </div>
@@ -81,8 +88,9 @@ const Weather = () => {
                 />
 
                 <p className="h2">
+                  {/* converting to fahrenheit */}
                   {Math.round(
-                    kelvinToFarenheit(apiData.main.temp) * (9 / 5) + 32
+                    TemperatureConversion(apiData.main.temp) * (9 / 5) + 32
                   )}
                   &deg; F
                 </p>
