@@ -22,7 +22,7 @@ const Weather = () => {
 
   const inputHandler = (event) => {
     setGetState(event.target.value);
-    setState('');
+    setState("");
   };
 
   const submitHandler = () => {
@@ -68,8 +68,10 @@ const Weather = () => {
               Search
             </button>
           </div>
+          <br />
+          <br />
 
-          <div className="card mt-3 mx-auto" style={{ width: "60vw" }}>
+          <div style={{ width: "60vw", paddingLeft: "23rem" }}>
             {apiData.main ? (
               <div class="card-body text-center">
                 <img
@@ -79,7 +81,10 @@ const Weather = () => {
                 />
 
                 <p className="h2">
-                  {Math.round(((kelvinToFarenheit(apiData.main.temp))*(9/5))+32)}&deg; F
+                  {Math.round(
+                    kelvinToFarenheit(apiData.main.temp) * (9 / 5) + 32
+                  )}
+                  &deg; F
                 </p>
 
                 <p className="h5">
