@@ -4,7 +4,6 @@
 // Also returns h1 indiciating implmenetation of map coming soon
 import React from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
-import MapsBG from "../../Images/MapsBG.png"
 import ImbeddedMap from "./ImbeddedMap"
 import styles from './Home.module.css'
 
