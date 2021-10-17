@@ -7,7 +7,7 @@ const Weather = () => {
   // the Api data useState is just to set the credentials
   // getState() and setState is by default set to Tokyo
   const [apiData, setApiData] = useState({});
-  const [getState, setGetState] = useState("tokyo");
+  const [getState, setGetState] = useState("");
   const [state, setState] = useState("tokyo");
 
   // API key and openweathermap api website
@@ -27,12 +27,12 @@ const Weather = () => {
   // in this case, the event being the search query such as 'Tokyo'
   const HandleInput = (event) => {
     setGetState(event.target.value);
-    setState("");
   };
 
   // function to handle and setState based on the user query that we retrieved from onChange and add it to useState 
   const HandleSubmit = () => {
     setState(getState);
+    setGetState('');
   };
 
   // convert form kelvin to fahrenheit because the api returns kelvin
@@ -59,9 +59,11 @@ const Weather = () => {
         <div className="container">
           <div className="mt-3 d-flex flex-column justify-content-center align-items-center">
             <div class="col-auto">
-              <label for="location-name" class="col-form-label">
-                Enter Location :
-              </label>
+              <br/>
+              <br/>
+              <h1>Weather</h1>
+              <br/>
+              <br/>
             </div>
             <div class="col-auto">
               <input
@@ -70,6 +72,7 @@ const Weather = () => {
                 class="form-control"
                 onChange={HandleInput}
                 value={getState}
+                placeholder='Search for a city...'
               />
             </div>
             <button className="btn btn-primary mt-2" onClick={HandleSubmit}>
