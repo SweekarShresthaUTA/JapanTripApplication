@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
-import styles from './Weather.module.css'
+import styles from "./Weather.module.css";
 
 const Weather = () => {
   // Different use state each of which handles when the state of the program changes during render
@@ -22,17 +22,17 @@ const Weather = () => {
       .then((data) => setApiData(data));
   }, [apiUrl]);
 
-  // handles the input provided by the user from input search bar, the onChange event triggers the 
+  // handles the input provided by the user from input search bar, the onChange event triggers the
   // event and the setGetState is changed to event.target.value which is the value that triggers the event
   // in this case, the event being the search query such as 'Tokyo'
   const HandleInput = (event) => {
     setGetState(event.target.value);
   };
 
-  // function to handle and setState based on the user query that we retrieved from onChange and add it to useState 
+  // function to handle and setState based on the user query that we retrieved from onChange and add it to useState
   const HandleSubmit = () => {
     setState(getState);
-    setGetState('');
+    setGetState("");
   };
 
   // convert form kelvin to fahrenheit because the api returns kelvin
@@ -42,7 +42,7 @@ const Weather = () => {
 
   return (
     <>
-    {/* rendering the navbar */}
+      {/* rendering the navbar */}
       <CoreNavBar
         title="MavsAbroadJapan"
         firstMenuTitle="Contacts"
@@ -59,11 +59,11 @@ const Weather = () => {
         <div className="container">
           <div className="mt-3 d-flex flex-column justify-content-center align-items-center">
             <div class="col-auto">
-              <br/>
-              <br/>
+              <br />
+              <br />
               <h1>Weather</h1>
-              <br/>
-              <br/>
+              <br />
+              <br />
             </div>
             <div class="col-auto">
               <input
@@ -72,7 +72,7 @@ const Weather = () => {
                 class="form-control"
                 onChange={HandleInput}
                 value={getState}
-                placeholder='Search for a city...'
+                placeholder="Search for a city..."
               />
             </div>
             <button className="btn btn-primary mt-2" onClick={HandleSubmit}>
@@ -105,8 +105,9 @@ const Weather = () => {
                 </p>
               </div>
             ) : (
-              <h4>Searching...</h4>
+              <h4>City not found...</h4>
             )}
+
           </div>
         </div>
       </div>

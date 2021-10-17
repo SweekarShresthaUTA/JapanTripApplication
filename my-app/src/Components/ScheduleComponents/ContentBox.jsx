@@ -42,7 +42,7 @@ function ContentBox(props) {
           name="content"
           onChange={handleChange}
           value={activity.content}
-          placeholder="Add an activity..."
+          placeholder="Provide any question you have have..."
           rows="3"
         />
         <button onClick={submitActivity}>Add</button>

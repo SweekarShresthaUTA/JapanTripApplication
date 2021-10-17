@@ -17,20 +17,20 @@ const Schedule = () => {
   var yyyy = today.getFullYear();
   today = mm + "/" + dd + "/" + yyyy; */
 
-  // setActivities changes the state of the empty array as more activites are added on
-  const [activities, setActivities] = useState([]);
+  // setQuestions changes the state of the empty array as more questions are added on
+  const [questions, setQuestions] = useState([]);
 
-  // function called to add more activity, uses JS spread operator to tag along previous activites planned for the day as well
-  function addActivity(newActivity) {
-    setActivities((prevActivity) => {
-      return [...prevActivity, newActivity];
+  // function called to add more questions, uses JS spread operator to tag along previous questions as well
+  function addQuestion(newQuestion) {
+    setQuestions((prevQuestion) => {
+      return [...prevQuestion, newQuestion];
     });
   }
 
-  // function called to delete any activities if user clicks on delete inside the activity box
-  function deleteActivity(id) {
-    setActivities((prevActivity) => {
-      return prevActivity.filter((activityItem, index) => {
+  // function called to delete any questions if user clicks on delete inside the question box
+  function deleteQuestion(id) {
+    setQuestions((prevQuestion) => {
+      return prevQuestion.filter((activityItem, index) => {
         return index !== id;
       });
     });
@@ -57,7 +57,7 @@ const Schedule = () => {
       <br />
 
       <h4 style={{ textAlign: "left" }}> <u> June 13th</u> </h4>
-      <p style={{textAlign: "left"}}><EditSchedule initialSchedule='Flight departs for Tokyo!'/></p>
+      <p style={{textAlign: "left"}}><EditSchedule initialSchedule='Something went wrong, please contact developers'/></p>
       <br />
 
       <h4 style={{ textAlign: "left" }}> <u> June 14th</u> </h4>
@@ -172,18 +172,18 @@ const Schedule = () => {
       <p style={{textAlign: "left"}}> Return to Tokyo</p>
       <br />
 
-     {/* <ContentBox onAdd={addActivity} />
-      {activities.map((activityItem, index) => {
+     <ContentBox onAdd={addQuestion} />
+      {questions.map((questionItem, index) => {
         return (
           <Activity
             key={index}
             id={index}
-            title={activityItem.title}
-            content={activityItem.content}
-            onDelete={deleteActivity}
+            title={questionItem.title}
+            content={questionItem.content}
+            onDelete={deleteQuestion}
           />
         );
-      })} */}
+      })}
       <img src={ScheduleBG} style={{position: "absolute", zIndex: -1, height: '218px'}} className="jp-img" alt="Jpn-Background-Img" />
       {/* src for iteration documentation for the image above -> https://www.pngwing.com/en/search?q=japan */}
     </div>

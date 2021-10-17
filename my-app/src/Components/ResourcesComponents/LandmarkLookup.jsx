@@ -35,7 +35,7 @@ const LandmarkLookup = () => {
       <br />
       <br />
       <div style={{ textAlign: "center" }}>
-        <h2>Search for Japanese cities / lankdmarks</h2>
+        <h2>Search for Japanese cities / landmarks</h2>
         <br />
         <br />
         <input
