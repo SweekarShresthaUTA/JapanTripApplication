@@ -1,11 +1,12 @@
-// Returns CoreNavbar with props consisting of all the titles for 
+// Returns CoreNavbar with props consisting of all the titles for
 // our page
 
 // Also returns h1 indiciating implmenetation of map coming soon
 import React from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
-import ImbeddedMap from "./ImbeddedMap"
-import styles from './Home.module.css'
+import ImbeddedMap from "./ImbeddedMap";
+import styles from "./Home.module.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 const Home = () => {
   return (
@@ -21,16 +22,14 @@ const Home = () => {
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
         fourthDropDownMenuOption="Weather"
-
       />
-      <br/><br/>
-      <br/>
+      <br />
+      <br />
+      <br />
       <div className={styles.map}>
-        <ImbeddedMap/>
+        <ImbeddedMap />
       </div>
-      {/* src for iteration documentation for the image above -> https://www.google.com/maps */}
-
     </div>
   );
-}
+};
 export default Home;
