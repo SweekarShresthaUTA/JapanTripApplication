@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CoreNavBar from "../NavbarComponents/CoreNavbar";
+import styles from './Weather.module.css'
 
 const Weather = () => {
   // Different use state each of which handles when the state of the program changes during render
@@ -78,7 +79,7 @@ const Weather = () => {
           <br />
           <br />
 
-          <div style={{ width: "60vw", paddingLeft: "23rem" }}>
+          <div className={styles.weather}>
             {apiData.main ? (
               <div class="card-body text-center">
                 <img
