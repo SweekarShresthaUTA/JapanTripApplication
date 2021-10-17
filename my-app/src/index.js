@@ -11,7 +11,7 @@ import CommonPhrases from "./Components/ResourcesComponents/CommonPhrases";
 import CulturalInformation from "./Components/ResourcesComponents/CulturalInformation";
 import LandmarkLookup from "./Components/ResourcesComponents/LandmarkLookup";
 import Login from "./Components/LoginComponents/Login";
-import Weather from './Components/Weather/Weather'
+import Weather from './Components/WeatherComponents/Weather'
 
 // The following Switch cases Routes the application page to different
 // pages based on the path provided from the imports above
