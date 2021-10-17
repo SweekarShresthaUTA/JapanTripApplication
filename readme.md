@@ -11,6 +11,9 @@ Main Code files are in my-app -> src
 5) Implemented weather lookup feature
 
 
+********IMPORTANT - ENVIRONMENT may say failed in GitHub, but the problem is resolved, we have a pre release environment
+https://mavs-abroad-japan-pre-release.herokuapp.com/ which is the current branch hosted on a website for customers to test & provide feedback****
+
 -----------------------------------------------General Information------------------------------------------------------
 
 Software and steps required to run the application
