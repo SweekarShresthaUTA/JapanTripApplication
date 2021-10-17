@@ -6,6 +6,7 @@ import ContentBox from "./ContentBox";
 import Activity from "./Activity";
 import "./Schedule.css";
 import ScheduleBG from "../../Images/ScheduleBG.png";
+import EditSchedule from "./EditSchedule";
 
 const Schedule = () => {
 
@@ -56,11 +57,11 @@ const Schedule = () => {
       <br />
 
       <h4 style={{ textAlign: "left" }}> <u> June 13th</u> </h4>
-      <p style={{textAlign: "left"}}> Flight departs for Tokyo!</p>
+      <p style={{textAlign: "left"}}><EditSchedule initialSchedule='Flight departs for Tokyo!'/></p>
       <br />
 
       <h4 style={{ textAlign: "left" }}> <u> June 14th</u> </h4>
-      <p style={{textAlign: "left"}}> Arrive and go to <a href="https://www.google.com/maps/place/K's+House+Tokyo+Oasis/@35.7157867,139.7913281,17z/data=!3m1!4b1!4m8!3m7!1s0x60188ec1843d7b15:0x55b8f2aa015161b2!5m2!4m1!1i2!8m2!3d35.7158115!4d139.7935244" >K's House</a> </p>
+      <p style={{textAlign: "left"}}><EditSchedule initialSchedule="Arrive and go to K's House" href="https://www.google.com/maps/place/K's+House+Tokyo+Oasis/@35.7157867,139.7913281,17z/data=!3m1!4b1!4m8!3m7!1s0x60188ec1843d7b15:0x55b8f2aa015161b2!5m2!4m1!1i2!8m2!3d35.7158115!4d139.7935244"/></p>
       <br />
 
       <h4 style={{ textAlign: "left" }}> <u> June 15th</u> </h4>
