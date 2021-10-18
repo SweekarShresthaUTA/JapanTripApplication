@@ -27,6 +27,7 @@ const Home = () => {
       <br />
       <br />
       <div className={styles.map}>
+        <h1>Map</h1>
         <ImbeddedMap />
       </div>
     </div>
