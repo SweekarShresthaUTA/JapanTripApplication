@@ -57,7 +57,7 @@ const Schedule = () => {
       <br />
 
       <h4 style={{ textAlign: "left" }}> <u> June 13th</u> </h4>
-      <p style={{textAlign: "left"}}><EditSchedule initialSchedule='Something went wrong, please contact developers'/></p>
+      <p style={{textAlign: "left"}}><EditSchedule initialSchedule='Flight departs to Tokyo'/></p>
       <br />
 
       <h4 style={{ textAlign: "left" }}> <u> June 14th</u> </h4>
