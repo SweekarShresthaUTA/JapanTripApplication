@@ -84,4 +84,11 @@
     cursor: pointer;
     outline: none;
   }
+
+  .calendar 
+  {
+    border: 0;
+    width:800;
+    height:600;
+  }
   
