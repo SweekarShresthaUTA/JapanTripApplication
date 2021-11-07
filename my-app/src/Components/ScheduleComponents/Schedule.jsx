@@ -5,6 +5,14 @@ import CoreNavBar from "../NavbarComponents/CoreNavbar";
 import "./Schedule.css";
 
 const Schedule = () => {
+  // if ("serviceWorker" in navigator) {
+  //   window.addEventListener("load", () => {
+  //     navigator.serviceWorker
+  //       .register("./serviceworker.js")
+  //       .then((reg) => console.log("success", reg.scope))
+  //       .catch((err) => console.log("failure", err));
+  //   });
+  // }
 
   return (
     <div>
@@ -25,8 +33,8 @@ const Schedule = () => {
       <div
         style={{
           margin: "auto",
-          marginLeft: '10px',
-          marginRight: '10px',
+          marginLeft: "10px",
+          marginRight: "10px",
         }}
       >
         <iframe

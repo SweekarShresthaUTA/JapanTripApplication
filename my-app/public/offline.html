@@ -25,20 +25,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Team 8 Japan Trip App</title>
+    <div>Please go online to access more information</div>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("./serviceworker.js")
-            .then((reg) => console.log("success", reg.scope))
-            .catch((err) => console.log("failure", err));
-        });
-      }
-    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
