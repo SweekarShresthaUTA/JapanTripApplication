@@ -1,14 +1,14 @@
 Team 8's MavsAbroad to Japan application
 
------------------------------------------------Iteration 2------------------------------------------------------
+-----------------------------------------------Iteration 3------------------------------------------------------
 
 Main Code files are in my-app -> src 
 
 1) **Ensure you always do an 'npm i' to get all the packages to run the application**
 2) **Ensure you install 'npm i google-maps-react'**
-3) Implemented interative map
-4) Implemented Edit Schedule and added tentative schedule
-5) Implemented weather lookup feature
+3) Implemented offline functionality using serviceworkers cache
+4) Implemented schedule view to be a calendar
+5) Started implementation on the logion functionality
 
 
 ********IMPORTANT - ENVIRONMENT may say failed in GitHub, but the problem is resolved, we have a pre release environment
