@@ -36,7 +36,7 @@ self.addEventListener("fetch", (event) => {
 });
 
 // Activate the service worker
-// activate sthe cache to whitelist the different cache urls and activate them with
+// activate the cache to whitelist the different cache urls and activate them with
 // javascript Promise call
 self.addEventListener("activate", (event) => {
   const cacheWhitelist = [];
