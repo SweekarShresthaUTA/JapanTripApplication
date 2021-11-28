@@ -1,6 +1,23 @@
 .pictures-bg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.phrases {
+  text-align: center;
+  font-size: 25px;
+}
+
+.basicPhrase {
+  text-align: center;
+  font-size: 35px;
+}
+
+.basicConversations {
+  vertical-align: top;
+  text-align: center;
+  font-size: 35px;
+}
+
