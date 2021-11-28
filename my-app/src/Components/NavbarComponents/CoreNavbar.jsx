@@ -39,9 +39,11 @@ function CoreNavBar(props) {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/Contacts">{firstMenuTitle}</Nav.Link>
-            <Nav.Link href="/Schedule">{secondMenuTitle}</Nav.Link>
-            <Nav.Link href="/CurrencyExchange">{thirdMenuTitle}</Nav.Link>
+            <Nav.Link href="/Schedule">{firstMenuTitle}</Nav.Link>
+            <Nav.Link href="/CurrencyExchange">{secondMenuTitle}</Nav.Link>
+            <Nav.Link href="/Contacts">{'Contacts'}</Nav.Link>
+            <Nav.Link href="/Home">{thirdMenuTitle}</Nav.Link>
+            {/* <Nav.Link href="/Home">{'Map'}</Nav.Link> */}
             <NavDropdown title={dropDownMenuTitle} id="basic-nav-dropdown">
               <NavDropdown.Item href="commonPhrases">
                 {firstDropDownMenuOption}

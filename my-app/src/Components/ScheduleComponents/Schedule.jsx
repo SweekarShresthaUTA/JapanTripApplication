@@ -15,9 +15,9 @@ const Schedule = () => {
       {/* Calling navbar to render the same navbar again for this page too */}
       <CoreNavBar
         title="MavsAbroadJapan"
-        firstMenuTitle="Contacts"
-        secondMenuTitle="Schedule"
-        thirdMenuTitle="Currency Exchange"
+        firstMenuTitle="Schedule"
+        secondMenuTitle="Currency Exchange"
+        thirdMenuTitle="Map"
         dropDownMenuTitle="Resources"
         firstDropDownMenuOption="Common Phrases"
         secondDropDownMenuOption="Landmark Lookup"

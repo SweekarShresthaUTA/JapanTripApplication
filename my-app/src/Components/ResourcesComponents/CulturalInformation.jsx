@@ -10,15 +10,14 @@ const CulturalInformation = () => {
       {/* Rendering the Navbar */}
       <CoreNavBar
         title="MavsAbroadJapan"
-        firstMenuTitle="Contacts"
-        secondMenuTitle="Schedule"
-        thirdMenuTitle="Currency Exchange"
+        firstMenuTitle="Schedule"
+        secondMenuTitle="Currency Exchange"
+        thirdMenuTitle="Map"
         dropDownMenuTitle="Resources"
         firstDropDownMenuOption="Common Phrases"
         secondDropDownMenuOption="Landmark Lookup"
         thirdDropDownMenuOption="Cultural Information"
         fourthDropDownMenuOption="Weather"
-
       />
       <div className="pictures-bg">
         <img src="9-13-page-000.jpg" width="550" height="700" alt="Tokyo"></img>
