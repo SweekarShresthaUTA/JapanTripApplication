@@ -9,8 +9,6 @@ import Schedule from "./Components/ScheduleComponents/Schedule";
 import CurrencyExchange from "./Components/CurrencyExchangeComponents/CurrencyExchange";
 import CommonPhrases from "./Components/ResourcesComponents/CommonPhrases";
 import CulturalInformation from "./Components/ResourcesComponents/CulturalInformation";
-import LandmarkLookup from "./Components/ResourcesComponents/LandmarkLookup";
-import Login from "./Components/LoginComponents/Login";
 import Weather from './Components/WeatherComponents/Weather';
 import Home from './Components/HomeComponents/Home';
 
@@ -29,8 +27,6 @@ ReactDOM.render(
         <Route path="/CommonPhrases" component={CommonPhrases} />
         <Route path="/Weather" component={Weather} />
         <Route path="/CulturalInformation" component={CulturalInformation} />
-        <Route path="/LandmarkLookup" component={LandmarkLookup} />
-        <Route path="/Login" component={Login} />
       </Switch>
     </Router>
 

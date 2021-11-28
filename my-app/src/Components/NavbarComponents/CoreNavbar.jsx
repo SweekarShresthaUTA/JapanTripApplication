@@ -19,7 +19,6 @@ function CoreNavBar(props) {
     thirdMenuTitle,
     dropDownMenuTitle,
     firstDropDownMenuOption,
-    secondDropDownMenuOption,
     thirdDropDownMenuOption,
     fourthDropDownMenuOption,
   } = props;
@@ -48,9 +47,6 @@ function CoreNavBar(props) {
               <NavDropdown.Item href="commonPhrases">
                 {firstDropDownMenuOption}
               </NavDropdown.Item>
-              <NavDropdown.Item href="landmarkLookup">
-                {secondDropDownMenuOption}
-              </NavDropdown.Item>
               <NavDropdown.Item href="culturalInformation">
                 {thirdDropDownMenuOption}
               </NavDropdown.Item>
@@ -59,9 +55,7 @@ function CoreNavBar(props) {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav.Link style={{ justifyContent: "right" }} href="/Login">
-            Sign Out
-          </Nav.Link>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
