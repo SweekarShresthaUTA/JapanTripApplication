@@ -7,34 +7,30 @@ import "./CurrencyExchange.css";
 import CurrencyRow from "./CurrencyRow";
 
 const CurrencyExchange = () => {
-
   // Call to the API that will provide us the latest USD To JPY rate, specifically $1 equivlent in JPY
   // We use the data returned back as JSON to set it to our USD_JPY_RATE
   const BASE_URL =
     "https://free.currconv.com/api/v7/convert?q=USD_JPY&compact=ultra&apiKey=49e1dd59324690c7911f";
 
   // Back-up url https://free.currconv.com/api/v7/convert?q=USD_JPY&compact=ultra&apiKey=3c5ecc810679f21982b2
-  // setUSD_JPY_RATE sets the value of USD_JPY_RATE whenever the app changes state -> or in this case whenever new amount is queried or 
+  // setUSD_JPY_RATE sets the value of USD_JPY_RATE whenever the app changes state -> or in this case whenever new amount is queried or
   //      API Call indicates the exchange rate has changed
-  // 
+  //
   // setAmount sets the state of the amount variable to the converted currency value either from USD to JPY or vice versa
-  // 
+  //
   // setAmountInFromCurrency sets a boolean value amountInFromCurrency -> true, indicating that we are converting from USD to JPY
-  //      OR it sets amountInFromCurrency -> false, indicating that we are converting from JPY to USD 
+  //      OR it sets amountInFromCurrency -> false, indicating that we are converting from JPY to USD
   const [USD_JPY_RATE, setUSD_JPY_RATE] = useState(0);
   const [amount, setAmount] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
 
   let toAmount, fromAmount;
 
-  if(amountInFromCurrency)
-  {
+  if (amountInFromCurrency) {
     // USD is provided and we are and we are getting the JPY equivalent by multiplying the exchange rate
     fromAmount = amount;
     toAmount = amount * USD_JPY_RATE;
-  }
-  else 
-  {
+  } else {
     // JPY is provided and we are and we are getting the USD equivalent by diving the exchange rate
     toAmount = amount;
     fromAmount = amount / USD_JPY_RATE;
@@ -49,20 +45,17 @@ const CurrencyExchange = () => {
       .then((data) => setUSD_JPY_RATE(data.USD_JPY));
   }, []);
 
-
-  const handleFromAmountChange = (e) => 
-  {
+  const handleFromAmountChange = (e) => {
     // seting JPY based on input provided in USD and setting the boolean amountInFromCurrency useState from above to true
     setAmount(e.target.value);
     setAmountInFromCurrency(true);
-  }
+  };
 
-  const handleToAmountChange = (e) => 
-  {
+  const handleToAmountChange = (e) => {
     // seting USD based on input provided in JPY and setting the boolean amountInFromCurrency useState from above to false
     setAmount(e.target.value);
     setAmountInFromCurrency(false);
-  }
+  };
 
   return (
     <div className="eliminateHorizontalScroll">
@@ -95,13 +88,23 @@ const CurrencyExchange = () => {
           <div className="col-lg-6">
             <div>
               {/* Another JSX component created to handle the input from user */}
-              ¥ amount<CurrencyRow amount={toAmount} onChangeAmount={handleToAmountChange} currency="JPY" />
+              ¥ amount
+              <CurrencyRow
+                amount={toAmount}
+                onChangeAmount={handleToAmountChange}
+                currency="JPY"
+              />
             </div>
           </div>
           <div class="col-lg-6">
             <div>
               {/* Another JSX component created to handle the input from user */}
-              $ amount<CurrencyRow amount={fromAmount} onChangeAmount={handleFromAmountChange} currency="USD"/>
+              $ amount
+              <CurrencyRow
+                amount={fromAmount}
+                onChangeAmount={handleFromAmountChange}
+                currency="USD"
+              />
             </div>
           </div>
         </div>

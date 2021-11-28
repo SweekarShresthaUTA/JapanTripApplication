@@ -21,9 +21,11 @@ const CommonPhrases = () => {
         fourthDropDownMenuOption="Weather"
       />
       <br />
-      <div className="float-container">
-        <div className="float-child">
+      <div className="container body">
+        <div className="row">
+          <div className="col-lg-6">
           <div>
+            {/* Contains common basic Japanese Phrases presented in one responsive column */}
             <h2 className="basicPhrase">
               Basic Japanese Phrases <br />
               <br />
@@ -89,10 +91,11 @@ const CommonPhrases = () => {
               <br />
             </p>
           </div>
-        </div>
-
-        <div class="float-child">
+           
+          </div>
+          <div class="col-lg-6">
           <div>
+            {/* Contains common basic Japanese Conversations presented in one responsive column */}
             <h3 className="basicConversations">
               Basic Japanese Conversations <br />
               <br />
@@ -166,6 +169,8 @@ const CommonPhrases = () => {
               <br />
               <br />
             </p>
+          </div>
+            
           </div>
         </div>
       </div>
