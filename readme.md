@@ -2,6 +2,8 @@ Team 8's MavsAbroad to Japan application
 
 -----------------------------------------------Final deliverable------------------------------------------------------
 
+**Architecture Diagram is uploaded in this repository as a pdf file**
+
 1) **Ensure you always do an 'npm i' to get all the packages to run the application**
 2) Implemented common phrases
 3) Refactored currency exhange according to feedback provided by Professor Aiken.
