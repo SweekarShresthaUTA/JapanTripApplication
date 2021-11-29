@@ -16,7 +16,7 @@ export default function CurrencyRow(props) {
       <input
         type="number"
         placeholder={placeHolderText}
-        value={amount}
+        value={Math.round(amount*100)/100}
         onChange={onChangeAmount}
         className="input"
       />
